@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background:white;
+    color: black;
+}
+
+.top-nav1{
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 20px;
+    font-size:0.9rem;
+}
+.top-nav2{
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px 20px;
+    font-size:0.9rem;
+}
+
+
+.button-align-nav{
+    display:flex;
+    text-decoration: underline;
+}
+
+.button-nav {
+    color: #000000;
+    background-color: #ffffff;
+    font-size: 14px;
+    border: 0px solid #ffffff;
+    padding: 15px;
+    letter-spacing: 1px;
+    cursor: pointer
+}
+.button-nav:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+.main-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:80vh;
+    text-align: center;
+}
+.content-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    height:80vh;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5rem;
+    
+}
+
+.button-align{
+    display:flex;
+    gap:30px;
+}
+
+
+.button-option {
+    color: #ffffff;
+    background-color: #000000;
+    font-size: 19px;
+    border: 3px solid #000000;
+    padding: 15px 50px;
+    letter-spacing: 1px;
+    text-decoration:none;
+    cursor: pointer
+}
+.button-option:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: underline;
+    margin: 20px;
+    text-decoration: none;
+  }
+  
+  .back-button:hover {
+    opacity: 0.3;
+  }
+  .back-button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    padding: 20px;
+    cursor: pointer;
+  }
+  
+  .search-wrapper {
+    position: relative;
+    margin: auto;
+  }
+  
+  .search-bar {
+    width: 300px;
+    padding: 10px 40px 10px 12px;
+    font-size: 1rem;
+    border: 2px solid black;
+    outline: none;
+  }
+  
+  .search-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+
+  .side-button {
+    
+    width: flex; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 10; /* Stay at the top */
+    right: 0;    
+    padding-top: 20px;
+    padding-right:100px;
+  }
+  .side-button:button{
+    float:right;
+  }
+  .list-link{
+    text-align: left;
+    display: block;
+    margin:10px 0;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color:black;
+    text-transform: lowercase;
+
+  }
+  .list-link:hover{
+    text-decoration:underline;
+}
+#mealDetails{
+    text-align: left;
+    width:min-content;
+    
+}
+#new-meal{
+    float:right;
+    margin:10px;
+}
+#video-tutorial{
+    float:right;
+    margin:10px;
+}
+#ingredientList {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.crossed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.about-container{
+  width: 50%;
+  margin-left:30%;
+}
+
+.small-chart {
+  width: 200px !important;
+  height: 200px !important;
+}
+h1{
+  text-align: center;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+    <title>what to eat?</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class = "top-nav2">
+        <button class="back-button" onclick="history.back()">
+            &#8592; 
+        </button>
+          
+    </div>
+    <div class = "about-container">
+        <h1>about</h1>
+        <p>How often do you ask, “What should I eat today?” People generally eat three meals a day and asking this question every day, multiple times a day can be exhausting. 
+            Realizing that this is a question that must be answered every day for the rest of your life is an overwhelming realization. </p>
+        <p>An online survey conducted by OnePoll found that 42% of respondents stare at the fridge hoping for dinner ideas and 48% hope that the cupboard provides ideas. </p>
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px;">
+            <canvas id="behaviorPie1" class="small-chart"></canvas>
+            <canvas id="behaviorPie2" class="small-chart"></canvas>
+          </div>
+          
+        <p>Respondents waste around 43 minutes a day or 37 hours a year trying to figure out what to eat — a whole working week (Lumley, 2024). </p>
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px;">
+            <canvas id="timeBarDay" width="300" height="50"></canvas>
+          </div>
+        <p>This is a lot of time and mental energy used. 
+            In addition to all the other decisions we have to make throughout the day, people can feel mentally overloaded and find it more difficult to make additional decisions – this is decision fatigue. </p>
+        <p>The consequences of decision fatigue may lead to people feeling tired, having brain fog, or other symptoms of mental and physical fatigue. Fortunately, a major way of overcoming decision fatigue is to make fewer decisions (AMA, 2021). </p>
+        <p>The goal of this website is for users to make only a few basic choices and then be suggested a recipe. The website uses the MealDB API which provides access to a database of a wide variety of recipes. </p>
+        <p><strong>sources:</strong></p>
+        <ul>
+            <li>Lumley, S. (2024, April 10). Indecisive Brits spend 37 hours a year trying to choose what meals to eat, study finds. Yahoo News. https://uk.news.yahoo.com/indecisive-brits-spend-37-hours-125034331.html?guccounter=1</li>
+            <li>‌What doctors wish patients knew about decision fatigue. (2021, November 19). American Medical Association. https://www.ama-assn.org/delivering-care/public-health/what-doctors-wish-patients-knew-about-decision-fatigue#</li>
+        </ul>
+        <a>githublink?</a>
+        
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+       new Chart(document.getElementById("behaviorPie1"), {
+    type: 'pie',
+    data: {
+      labels: ["Staring at Fridge", "Other"],
+      datasets: [{
+        data: [42, 58],
+        backgroundColor: ["#FF6384", "#DDDDDD"]
+      }]
+    },
+    options: {
+      plugins: {
+        title: {
+          display: true,
+          text: "Stare at Fridge (42%)",
+          font: { size: 16 }
+        }
+      }
+    }
+  });
+
+  new Chart(document.getElementById("behaviorPie2"), {
+    type: 'pie',
+    data: {
+      labels: ["Staring at Cupboard", "Other"],
+      datasets: [{
+        data: [48, 52],
+        backgroundColor: ["#36A2EB", "#DDDDDD"]
+      }]
+    },
+    options: {
+      plugins: {
+        title: {
+          display: true,
+          text: "Stare at Cupboard (48%)",
+          font: { size: 16 }
+        }
+      }
+    }
+  });
+
+    // HORIZONTAL BAR: Time in a Day
+    new Chart(document.getElementById("timeBarDay"), {
+    type: 'bar',
+    data: {
+      labels: ["Daily Decision Time"],
+      datasets: [
+        {
+          label: "Time Deciding (43 min)",
+          data: [43],
+          backgroundColor: "#FFCE56"
+        },
+        {
+          label: "Other Time (1397 min)",
+          data: [1397],
+          backgroundColor: "#CCCCCC"
+        }
+      ]
+    },
+    options: {
+      indexAxis: 'y',
+      plugins: {
+        title: {
+          display: true,
+          text: "Time Spent Deciding Meals (Daily)"
+        },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => `${ctx.dataset.label}: ${ctx.raw} min`
+          }
+        }
+      },
+      responsive: true,
+      scales: {
+        x: {
+          stacked: true,
+          max: 1440,
+          title: {
+            display: true,
+            text: "Minutes in a Day"
+          }
+        },
+        y: {
+          stacked: true
+        }
+      }
+    }
+  });
+
+      </script>
+      
+</body>
+
+</html>

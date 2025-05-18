@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meal Details</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <button class="back-button" onclick="history.back()">
+        &#8592; 
+    </button>
+    <div class="side-button">
+        <div class="vertical-button-align">
+            <a id="new-meal" class="button-option" href="home.html"><b>new meal</b></a>
+            <br>
+            <br>
+            <a id="video-tutorial" class="button-option"><b>video tutorial</b></a>
+        </div>
+    </div>
+    <div class="content-container">
+        <h1 id="meal-name">meal name</h1>
+        <div id="mealDetails">
+            <p><strong>ingredients:</strong></p>
+            <ul id="ingredientList"></ul>
+            <p><strong>instructions:</strong></p>
+            <ol id="instructionsList"></ol>
+            <p><strong>final product:</strong></p>
+            <img id="mealImage">
+        </div>
+    </div>
+  
+
+  <script src="meal-details-script.js"></script>
+</body>
+</html>
